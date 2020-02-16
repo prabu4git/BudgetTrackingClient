@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrackingServiceService } from '../_service/tracking-service.service';
+import { Budget } from '../_models/budget.model';
 
 @Component({
   selector: 'app-budget-tracking',
@@ -8,12 +9,13 @@ import { TrackingServiceService } from '../_service/tracking-service.service';
 })
 export class BudgetTrackingComponent implements OnInit {
 
+  budget: Budget[];
   constructor(private trackingService: TrackingServiceService) { }
 
   ngOnInit() {
-      alert('heelo');
+
       this.trackingService.showExpenses().subscribe((data)=>{
-        console.log(data);
+          this.budget = data;
       });
     }
 

@@ -1,1 +1,22 @@
-<p>budget-tracking works!</p>
+
+
+<table>
+  <thead>
+    <th>TransactionDate</th>
+    <th>PostDate</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Type</th>
+    <th>Amount</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let b of budget">
+    <td>{{b.transactionDate}}</td>
+    <td>{{b.postDate}}</td>
+    <td>{{b.description}}</td>
+    <td>{{b.category}}</td>
+    <td>{{b.type}}</td>
+    <td>{{b.amount}}</td>
+  </tr>
+  </tbody>
+</table>
