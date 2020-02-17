@@ -1,4 +1,6 @@
-export class Budget{
+export class Budget
+{
+  id: string;
   transactionDate: string;
   postDate: string;
   description: string;

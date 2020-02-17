@@ -10,10 +10,11 @@ import { Budget } from '../_models/budget.model';
 export class BudgetTrackingComponent implements OnInit {
 
   budget: Budget[];
+  tableColumns: string[];
   constructor(private trackingService: TrackingServiceService) { }
 
   ngOnInit() {
-
+    this.tableColumns  = ['transactionDate', 'postDate', 'description', 'category', 'type', 'amount'];
       this.trackingService.showExpenses().subscribe((data)=>{
           this.budget = data;
       });

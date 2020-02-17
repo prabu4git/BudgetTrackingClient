@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { BudgetTrackingComponent } from './budget-tracking/budget-tracking.component';
 import { BudgetHomeComponent } from './budget-home/budget-home.component';
 import { TrackingServiceService } from './_service/tracking-service.service';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { TrackingServiceService } from './_service/tracking-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [
     TrackingServiceService
